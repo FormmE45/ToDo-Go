@@ -1,7 +1,8 @@
 package main
 
 import ("github.com/gin-gonic/gin"
-		"net/http")
+		"net/http"
+		"fmt")
 
 type todo struct{
 	ID 			string 		"json:'id'"
@@ -20,4 +21,5 @@ func main(){
 	router := gin.Default()
 	router.GET("/todos",getTodos)
 	router.Run("localhost:9090")
+	fmt.Print("1")
 }
